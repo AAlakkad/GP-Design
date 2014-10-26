@@ -7,6 +7,6 @@ GP-Design
 - [ ] Recipes index
 - [ ] Ingredient form
 - [ ] Ingredients index
-- [ ] Login
-- [ ] Signup
+- [x] Login
+- [x] Signup
 - [ ] Search form
