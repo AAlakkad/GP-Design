@@ -74,9 +74,11 @@ gulp.task('clean', function () {
 
 gulp.task('build', ['html', 'images', 'fonts']);
 
-gulp.task('default', ['clean'], function () {
+gulp.task('default_old', ['clean'], function () {
     gulp.start('build');
 });
+
+gulp.task('default', ['watch']);
 
 gulp.task('serve', ['styles'], function () {
     browserSync.init(null, {
@@ -110,10 +112,10 @@ gulp.task('wiredep', function () {
 });
 
 gulp.task('watch', ['serve'], function () {
- 
+
     // watch for changes
     gulp.watch(['app/*.html'], reload);
- 
+
     gulp.watch('app/styles/**/*.scss', ['styles']);
     gulp.watch('app/scripts/**/*.js', ['scripts']);
     gulp.watch('app/images/**/*', ['images']);
